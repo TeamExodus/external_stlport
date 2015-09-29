@@ -39,8 +39,8 @@ libstlport_c_includes := \
 	bionic \
         bionic/libstdc++/include \
 
-libstlport_cflags := -D_GNU_SOURCE
-libstlport_cppflags := -fuse-cxa-atexit
+libstlport_cflags := -D_GNU_SOURCE -O2 $(DEBUG_SYMBOL_FLAGS) $(DEBUG_FRAME_POINTER_FLAGS)
+libstlport_cppflags := -fuse-cxa-atexit -O2  $(DEBUG_SYMBOL_FLAGS) $(DEBUG_FRAME_POINTER_FLAGS)
 
 ##########################################
 include $(CLEAR_VARS)
